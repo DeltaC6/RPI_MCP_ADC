@@ -5,6 +5,12 @@ MCP3008 ADC APPLICAITON
 Dependencies:
     WiringPi library: sudo apt-get install wiringPi
 
+Usage:
+    Call the following command in the terminal of RPi.
+        'make'
+        or
+        'make run'
+
 HOW IT WORKS?
     This program uses two threads running in the background with the main
     application.
