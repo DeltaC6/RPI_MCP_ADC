@@ -29,7 +29,7 @@
 #include <wiringPiSPI.h>
 //============================================================================//
 
-//===== CONSTANT AND VARIABLE DEFINITIONS SECTION ============================//
+//===== CONSTANT AND VARIABLE DECLARATION SECTION ============================//
 // SPI Channel
 #define SPI_CHANNEL_0   0U
 #define SPI_CHANNEL_1   1U
@@ -50,7 +50,7 @@
 #define CHAN_CONF_DIFF  0U
 //============================================================================//
 
-//===== FUNCTION DEFINITIONS SECTION =========================================//
+//===== FUNCTION DECLARATION SECTION =========================================//
 /*!
  * @brief This function initializes the GPIO using wiring pi library for RPi
  * @param None

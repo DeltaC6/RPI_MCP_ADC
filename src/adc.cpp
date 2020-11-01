@@ -41,10 +41,10 @@ int16_t readADC(uint8_t spiChannel, uint8_t confMode, int8_t adcChannel) {
     int16_t res = 0;
     if(adcChannel < 0 || adcChannel > 7) return -1;
     
-    uint8_t buf[3] = {1};                                                       // Start Bit
-    buf[1] = (confMode + adcChannel) << 4;                                      // Config bit and channel
-    wiringPiSPIDataRW(spiChannel, buf, sizeof(buf));                            // Single mode: [0x10, 0x20...] Diff mode: [0x90, 0xA0....]
-    res = ((buf[1] & 0x03) << 8) + buf[2];                                      // Result byte received duing the cycle of mode writing as well as next cycle.
+    uint8_t buf[3] = {1};
+    buf[1] = (confMode + adcChannel) << 4;
+    wiringPiSPIDataRW(spiChannel, buf, sizeof(buf));
+    res = ((buf[1] & 0x03) << 8) + buf[2];
     return res;
 }
 
