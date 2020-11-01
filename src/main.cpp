@@ -15,9 +15,9 @@
  *          This application read data from 4 chanels at greater than 40KSPS
  *          sampling rate and write it to a log file
  * 
- *          Time management for reader and writer threads is completed
- *          To close the threads safely just reset the isReaderRunning and 
- *          isWriterRunning flags
+ *          Time management for reader and writer threads is completed. To
+ *          close the threads safely just reset the isReaderRunning and 
+ *          isWriterRunning flags.
  * 
  *  A project for fiverr client
  * 
@@ -79,6 +79,7 @@ void adcReader(void) {
         // This time management routine will compensate for sample capacitor
         // charge time as well
         // Time = 5Tau = 5RC = 5 * 1e3 * 20e-12 = 0.12us
+        // Chnage time as low as 1us to increase sampled data
         std::this_thread::sleep_for(std::chrono::microseconds(10));
     }
 
