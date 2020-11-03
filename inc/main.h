@@ -2,7 +2,7 @@
  * @author  Syed Asad Amin
  * @date    Nov 1st, 2020
  * @file    main.h
- * @version v1.0.3
+ * @version v1.0.5
  *          | v1.0.0 -> Initial Commit
  *          | v1.0.1 -> Adding methods to read ADC data form MCP3008 using SPI
  *          | v1.0.2 -> Created reader and writer threads for synced operations
